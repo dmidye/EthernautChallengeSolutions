@@ -22,5 +22,6 @@ Once that works it's just a matter of calling it 10 times and submitting the lev
 See CoinflipHack.sol to see the full solution.
 
 Helpful Links:
+
 https://medium.com/@nicolezhu/ethernaut-lvl-3-walkthrough-how-to-abuse-psuedo-randomness-in-smart-contracts-4cc06bb82570
 https://medium.com/coinmonks/is-block-blockhash-block-number-1-okay-14a28e40cc4b
