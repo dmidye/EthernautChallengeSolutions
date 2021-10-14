@@ -2,7 +2,7 @@
 pragma solidity ^0.6.0;
 
 contract KingHack {
-    address payable ogContract = *your instance address*;
+    address payable ogContract = /*your instance address*/;
     
     function attack() public payable {
         // when calling this in Remix, specify 1 ether in the value field

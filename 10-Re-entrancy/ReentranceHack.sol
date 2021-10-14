@@ -31,7 +31,7 @@ contract Reentrance {
 
 
 contract ReentranceHack {
-    Reentrance ogContract = Reentrance(*your instance address*);
+    Reentrance ogContract = Reentrance(/*your instance address*/);
     
     // initial call to kick things off
     function attack() public {
