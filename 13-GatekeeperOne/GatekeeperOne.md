@@ -33,13 +33,14 @@ I could not get this method to work on Rinkeby.
 # Gate Three
 To pass gate 3 you'll need to pass 3 sub-gates.
 
-Let's say our address is 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db.
-
 To pass all three gates, the key needs to fulfill two conditions, both achieved by using "bit masking":
 
 1) 0x11111111 == 0x1111 -->  = 0x0000FFFF
+    
     this causes the last 4 bits to be the same for both uint32 and uint16
+
 2) 0x1111111100001111 != 0x00001111 --> 0xFFFFFFFF0000FFFF
+    
     this causes uint32(uint64(_gateKey)) != uint64(_gateKey) by keeping the preceding values of the last step
 
 
