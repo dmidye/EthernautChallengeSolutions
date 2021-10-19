@@ -10,7 +10,7 @@ This is a refresher on the difference between tx.origin and msg.sender.
 ### Gate Two
 Nicole Zhu did a great walkthrough of the mechanism behind contract creation that I'll include in the Helpful Links section at the bottom.
 
-In a nutshell, to pass this gate you must call the enter() function inside the constructor of your attacking contract. 
+In a nutshell, to pass this gate you must call enter() in such a way that the size of your attacking contract's code is 0(that's what extcodesize is retrieving). To accomplish this, call the enter() function inside the constructor of your attacking contract. 
 
 Because contract creation isn't complete when enter() is called, extcodesize registers as 0, satisfying the condition for gate two.
 
