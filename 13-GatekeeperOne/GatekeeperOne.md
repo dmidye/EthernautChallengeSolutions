@@ -5,10 +5,11 @@ In any case, I'd recommend to take your time with this one and introduce yoursel
 ## Explanation
 To become an entrant, you must pass three logic gates. 
 
-# Gate One
-To pass this gate, call the enter() function from a smart contract and not from your metamask address.
+### Gate One
+To pass this gate, call the enter() function from a smart contract and not from your wallet address.
+This is a refresher on the difference between tx.origin and msg.sender.
 
-# Gate Two
+### Gate Two
 To pass this gate, gasLeft() must be a multiple of 8191. The accepted way to do this is to use the built-in test blockchain on Remix(London VM), call enter() with an arbitrary amount of gas, and step through until you get to the "gas" opcode.  
 
 The information that comes with the gas opcode includes the amount of gas left at that point.
@@ -30,7 +31,7 @@ function attack() public {
 ```
 I could not get this method to work on Rinkeby.
 
-# Gate Three
+### Gate Three
 To pass gate 3 you'll need to pass 3 sub-gates.
 
 To pass all three gates, the key needs to fulfill two conditions, both achieved by using "bit masking":
