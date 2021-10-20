@@ -25,7 +25,7 @@ await contract.approve(player, await contract.balanceOf(player))
 2) Transfer the tokens to any other valid address
 
 ```bash
-await contract.transferFrom(*your address*, *beneficiary address*, await contract.balanceOf(player))
+await contract.transferFrom(player, *beneficiary address*, await contract.balanceOf(player))
 ```
 
 This is a simpler level, but it is worth reading through the following links to get a better understanding of how ERC20 tokens are implemented:
